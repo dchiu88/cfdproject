@@ -4,9 +4,12 @@ root 'sessions#index'
 
 get '/login' => 'sessions#new'
 post '/login' => 'sessions#create'
+delete '/logout' => 'sessions#destroy'
 
 get '/signup' => 'admins#new'
 post '/signup' => 'admins#create'
+
+
 
   resources :timesheetreports do
     resources :timesheet_entries
