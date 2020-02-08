@@ -1,0 +1,18 @@
+<h1>Add a New Timesheet Entry</h1>
+<%= form_for @timesheet_entry do |f| %>
+
+  <%= f.label :name %>
+  <%= f.select :name,options_for_select(["Ting, Fei, Yifei, David, Hilary"]), include_blank:true %>
+  <br></br>
+
+  <%= f.label :hours %>
+  <%= f.text_field :hours %>
+  <br></br>
+
+  <%= f.label :PTO %>
+  <%= f.text_field :PTO %>
+  <br></br>
+
+  <%= f.submit%>
+
+<% end %>
