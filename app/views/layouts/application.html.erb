@@ -12,7 +12,7 @@
   <body>
 
   <%= link_to 'Logout', '/logout', method: :delete %> &nbsp &nbsp
-  <%= link_to 'Add a Timesheet Entry', timesheet_entries_path, class:'button' %> &nbsp &nbsp
+  <%= link_to 'Add a Timesheet Entry', new_timesheet_entry_path, class:'button' %> &nbsp &nbsp
   <%= link_to 'View Timesheet Reports', timesheetreports_path, class:'button' %>
 
     <%= yield %>
