@@ -18,12 +18,15 @@ def create
   @timesheet_entry = TimesheetEntry.new(timesheet_entry_params)
   if @timesheet_entry.save
     redirect_to timesheet_entry_path(@timesheet_entry)
+  else
+    flash[:error] = "Didn't save"
+    render 'new'
   end
 end
 
 private
 
 def timesheet_entry_params
-  params.require(:timesheet_entry).permit(:hours, :pto)
+  params.require(:timesheet_entry).permit(:date, :name, :timein, :timeout)
 end
 end

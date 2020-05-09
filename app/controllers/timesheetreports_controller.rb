@@ -1,11 +1,12 @@
 class TimesheetreportsController < ApplicationController
 
 def index
+
 end
 
 def show
   #enter logic here to find related time sheet entries by periodend
-  # @timesheet_entry.where(timesheet_entry :date > timesheetreport :startdate and timesheet_entry < enddate) 
+  # @timesheet_entry.where(timesheet_entry :date > timesheetreport :startdate and timesheet_entry < enddate)
 end
 
 def new
