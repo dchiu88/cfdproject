@@ -1,0 +1,12 @@
+<h1> Create a new Timesheet Report </h1>
+
+<%= form_for @timesheetreport do |f| %>
+
+<%= f.label :periodstart %>
+<%= f.select :periodstart,options_for_select(), include_blank:false %>
+
+<%= f.label :periodend %>
+<%= f.select :name,options_for_select(), include_blank:false %>
+
+
+<% end %>
