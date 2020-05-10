@@ -1,3 +1,5 @@
 <h1> test </h1>
-<%= TimesheetEntry.where("date >= ? AND date <= ?", params[:periodstart], params[:periodend])
- %>
+<%= @timesheetentry.date %>
+<%= @timesheetentry.name %>
+<%= @timesheetentry.timein %>
+<%= @timesheetentry.timeout %>
