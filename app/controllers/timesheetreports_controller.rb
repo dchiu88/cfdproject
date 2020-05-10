@@ -27,7 +27,7 @@ end
 private
 
 def timesheetreport_params
-  params.require(:timesheetreport).permit(:hours, :pto)
+  params.require(:timesheetreport).permit(:periodstart, :periodend)
 end
 
 end
