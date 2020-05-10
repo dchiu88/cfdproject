@@ -2,7 +2,7 @@
 <%= form_for @timesheet_entry do |f| %>
 
   <%= f.label :date %>
-  <%= f.text_field :date %>
+  <%= f.date_select :date, :order => [:day, :month, :year] %>
   <br></br>
 
   <%= f.label :name %>

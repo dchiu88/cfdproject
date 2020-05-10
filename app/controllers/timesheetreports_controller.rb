@@ -5,7 +5,11 @@ end
 
 def show
   #enter logic here to find related time sheet entries by periodend
+  @timesheetreport = Timesheetreport.find_by(id: params[:id])
+  if !@timesheetreport
+    redirect_to timesheetreport_path(@timesheetreport)
   # @timesheet_entry.where(timesheet_entry :date > timesheetreport :startdate and timesheet_entry < enddate)
+end
 end
 
 def new
