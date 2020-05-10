@@ -1,7 +1,6 @@
 class TimesheetreportsController < ApplicationController
 
 def index
-
 end
 
 def show

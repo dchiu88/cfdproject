@@ -2,11 +2,14 @@
 
 <%= form_for @timesheetreport do |f| %>
 
-<%= f.label :periodstart %>
-<%= f.select :periodstart,options_for_select(), include_blank:false %>
+<%= f.label "Period Start" %>
 
-<%= f.label :periodend %>
-<%= f.select :name,options_for_select(), include_blank:false %>
+<%= f.date_select :periodstart, :order => [:day, :month, :year] %>
+<br>
+<br>
+<%= f.label "Period End" %>
+
+<%= f.date_select :periodend, :order => [:day, :month, :year] %>
 
 
 <% end %>
