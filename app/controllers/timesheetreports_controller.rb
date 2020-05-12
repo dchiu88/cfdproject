@@ -6,7 +6,8 @@ end
 def show
   #enter logic here to find related time sheet entries by periodend
   @timesheetreport = Timesheetreport.find_by(id: params[:id])
-  @timesheetentry = TimesheetEntry.where("date >= ? AND date <= ?", params[:periodstart], params[:periodend])
+  @timesheetentry = TimesheetEntry.where("date: >= ? AND date: <= ?", @timesheetreport.periodstart, @timesheetreport.periodend)
+  byebug
   if !@timesheetreport
     redirect_to timesheetreport_path(@timesheetreport)
   # @timesheet_entry.where(timesheet_entry :date > timesheetreport :startdate and timesheet_entry < enddate)
